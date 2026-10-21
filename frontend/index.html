@@ -1,0 +1,25 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Panel seguro</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <main class="shell">
+    <section class="hero"><span class="eyebrow">JWT · SCOPES</span><h1>Panel seguro</h1><p>Consulta y administra tus elementos según tu nivel de acceso.</p></section>
+    <section class="card" id="login-card">
+      <h2>Iniciar sesión</h2><p class="muted">Usa un usuario registrado en la API.</p>
+      <form id="login-form"><label>Usuario<input name="username" required></label><label>Contraseña<input name="password" type="password" required></label><button>Entrar</button></form>
+      <p class="error" id="login-error"></p>
+    </section>
+    <section class="card hidden" id="app-card">
+      <div class="toolbar"><div><span class="eyebrow">SESIÓN ACTIVA</span><h2 id="welcome"></h2></div><button class="secondary" id="logout">Salir</button></div>
+      <div id="editor" class="editor hidden"><h3>Nuevo elemento</h3><form id="item-form"><input name="name" placeholder="Nombre" required><input name="description" placeholder="Descripción"><button>Guardar</button></form></div>
+      <div class="items" id="items"></div><p class="error" id="app-error"></p>
+    </section>
+  </main>
+  <script src="app.js"></script>
+</body>
+</html>
