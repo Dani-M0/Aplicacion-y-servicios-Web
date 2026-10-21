@@ -1,9 +1,8 @@
-venv/
-env/
-ENV/
-**/.venv/
+# Entornos virtuales de Python (en cualquier subcarpeta)
 **/venv/
-.venv/
+**/.venv/
+**/env/
+**/ENV/
 __pycache__/
 *.py[cod]
 *$py.class
@@ -37,6 +36,7 @@ app.db
 *.code-workspace
 .history/
 .vscode-test/
+node_modules/
 *.swp
 *.swo
 *~

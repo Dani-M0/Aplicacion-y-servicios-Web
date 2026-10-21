@@ -11,7 +11,6 @@ Al finalizar la actividad, el estudiante podrá:
 - Generar y validar tokens JWT.
 - Diferenciar autenticación de autorización.
 - Proteger endpoints según los permisos del usuario.
-- Consumir una API desde un frontend HTML, CSS y JavaScript.
 
 ## Marco teórico
 
@@ -38,11 +37,6 @@ En este proyecto se utilizan dos roles:
 │   ├── main.py          # Rutas de la API
 │   ├── models.py        # Modelos Usuario e Item
 │   └── schemas.py       # Esquemas de validación
-├── frontend/
-│   ├── index.html       # Interfaz principal
-│   ├── styles.css       # Estilos
-│   └── app.js           # Login y consumo de la API
-├── nginx.conf           # Servidor frontend y proxy hacia FastAPI
 ├── requirements.txt     # Dependencias de Python
 └── .env.example         # Variables de configuración
 ```
@@ -55,7 +49,6 @@ Requisitos:
 
 - Python 3.10 o superior.
 - Git.
-- Nginx, si se desea ejecutar el frontend mediante el proxy.
 
 Clonar el repositorio y entrar a la carpeta:
 
@@ -99,24 +92,6 @@ La API y su documentación estarán disponibles en:
 - Documentación: <http://127.0.0.1:8000/docs>
 
 Desde `/docs` se puede registrar un usuario, iniciar sesión y probar los endpoints protegidos. Para el login se debe usar el formulario OAuth2 disponible en la documentación.
-
-## Ejecutar el frontend con Nginx
-
-Editar `nginx.conf` y reemplazar:
-
-```text
-/ruta/absoluta/al/proyecto/frontend
-```
-
-por la ruta absoluta de la carpeta `frontend`.
-
-Después, iniciar Nginx con esa configuración. El frontend estará disponible en:
-
-```text
-http://localhost:8080
-```
-
-FastAPI debe mantenerse ejecutándose en el puerto `8000` para que Nginx pueda enviarle las solicitudes `/api`.
 
 ## Subir el proyecto a un repositorio propio
 
